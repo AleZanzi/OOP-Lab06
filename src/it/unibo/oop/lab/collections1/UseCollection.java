@@ -37,12 +37,12 @@ public final class UseCollection {
          * element of the first list. You can not use any "magic number".
          * (Suggestion: use a temporary variable)
          */
-    	int temp;
-    	temp = alist.size()-1;
+    	int last;
+    	last = alist.size()-1;
     	for(int i=0 ; i<alist.size()/2 ; i++){
-    		int k = alist.get(temp-i);
-    		alist.set(temp-i, alist.get(i));
-    		alist.set(i, k);
+    		int temp = alist.get(last-i);
+    		alist.set(last-i, alist.get(i));
+    		alist.set(i, temp);
     	}
     	/*
          * 4) Using a single for-each, print the contents of the arraylist.
