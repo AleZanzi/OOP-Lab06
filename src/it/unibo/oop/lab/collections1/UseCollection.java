@@ -37,12 +37,18 @@ public final class UseCollection {
          * element of the first list. You can not use any "magic number".
          * (Suggestion: use a temporary variable)
          */
-    	   
+    	int temp;
+    	temp = alist.size()-1;
+    	for(int i=0 ; i<alist.size()/2 ; i++){
+    		int k = alist.get(temp-i);
+    		alist.set(temp-i, alist.get(i));
+    		alist.set(i, k);
+    	}
     	/*
          * 4) Using a single for-each, print the contents of the arraylist.
          */
-    	for ( final int j : alist) {
-    		System.out.println(" " + alist);
+    	for ( final int i : alist) {
+    		System.out.println(" " + i);
     	}
         /*
          * 5) Measure the performance of inserting new elements in the head of
@@ -75,6 +81,7 @@ public final class UseCollection {
          * 
          * Oceania -> 38,304,000
          */
+    	
         /*
          * 8) Compute the population of the world
          */
